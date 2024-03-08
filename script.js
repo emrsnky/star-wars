@@ -71,7 +71,7 @@ function createSwCards() {
       for (user of data.characters) {
         swCard.innerHTML += `<div class="col-lg-4 col-md-6 mb-5 justify-content-center text-center align-items-center ">
           <div class="card bg-black text-white border-light " style="width: 18rem;">
-            <img src="${user.pic}" class="card-img-top" alt="${user.name}" style="height: 400px;">
+            <img src="${user.pic}" class="card-img-top" alt="${user.name}" style="height: 350px;">
             <div class="card-body">
               <p class="card-text">${user.name}</p>
               <p class="card-text">Origin: ${user.homeworld}</p>
@@ -83,6 +83,19 @@ function createSwCards() {
       swContentCreated = true;
     });
 }
+
+// Change the button text
+function changeButtonText() {
+  let buttonText = document.getElementById("show");
+  if (buttonText.innerText === "Click to Enter Galactic Age") {
+    buttonText.innerText = "Show Less";
+  } else {
+    buttonText.innerText = "Click to Enter Galactic Age";
+  }
+}
+document.getElementById("show-more").addEventListener("click", changeButtonText);
+
+
 
 // Hide the first div after 10 seconds
 function hideDiv() {
@@ -102,5 +115,3 @@ function showSecondDiv() {
   }
 }
 setTimeout(showSecondDiv, 10500);
-
-
