@@ -2,14 +2,29 @@ body {
   margin: 0;
   background-color: black !important;
   overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+#starContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: -1;
 }
 
 .star {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  background-color: white;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
   z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px #fff,
+  0 0 80px #fff; 
 }
 
 /* Set the animation, color, size and hide the text */
@@ -18,7 +33,7 @@ body {
   top: 30%;
   left: 35%;
   z-index: 1;
-  animation: intro 4s ease-out 1s;
+  animation: intro 2s ease-out 1s;
   color: rgb(75, 213, 238);
   font-weight: 400;
   font-size: 300%;
@@ -47,7 +62,7 @@ body {
   left: -30%;
   z-index: 1;
   margin: auto;
-  animation: logo 5s ease-out 5s;
+  animation: logo 4s ease-out 4s;
   opacity: 0;
   font-size: 1000%;
 }
@@ -80,5 +95,15 @@ p {
 
 #second-div {
   display: none;
+}
+
+#show-more {
+  cursor: pointer;
+}
+
+#filter-button{
+ cursor: pointer;
+ 
+ 
 }
 
